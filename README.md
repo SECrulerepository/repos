@@ -30,6 +30,9 @@ Let's create a question for this syntax
 ```
 df.pivot_table(index='A', columns='B', values='G', aggfunc='sum')
 ```
+  
+  
+  
 Dataframe after this operation will look like this. That is, this will be answer studets should put together:  
 ![answer1](img_readme/answer1.png)  
 
