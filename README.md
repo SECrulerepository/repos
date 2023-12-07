@@ -92,10 +92,10 @@ This is an element we are going to learn about. There are 5 attibutes for this e
 col attribute helps you set the number of column. In this example, it's set to 3.  
 This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.  
 ![column_set](img_readme/column_set.png)  
-Make sure each column in the set has three cells  
+Take a look each column in the set has three cells  
 
-![answer_form](img_readme/column_set.png)  
-Make sure column dropzone has three places to drop one of choices in the set
+![answer_form](img_readme/answer_form.png)  
+Take a look column dropzone has three places to drop one of choices in the set
   
 2. row
 row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.  
@@ -127,7 +127,7 @@ This is how columns and rows choices look like when ellipsis is set to true. Als
 
 Now, let break down **pl-column**, **pl-index**, and **pl-row**. Each element creats column choices, index choices, and row choices in the set. I will explain it further.  
 
-1. pl-column  
+###. pl-column  
 ```
 <pl-column>
     <pl-choice correct="false">B two one</pl-choice>
@@ -148,3 +148,4 @@ What you want to do will be...:
 ```
 <pl-choice correct="false">He\sllo world !</pl-choice>
 ```
+Now, I will explain correct attribute of column. 
