@@ -34,7 +34,9 @@ df.pivot_table(index='A', columns='B', values='G', aggfunc='sum')
 \
 Dataframe after this operation will look like this. That is, this will be answer studets should put together:  
 ![answer1](img_readme/answer1.png)  
-
+\
+\
+\
 Below is question.html of this question(questions/pivot-table_question1).
 ```
 <pl-dataframe params-name="df" show-index="true" show-dimensions="false" digits="4"></pl-dataframe>
@@ -84,26 +86,33 @@ Below is question.html of this question(questions/pivot-table_question1).
     </pl-row>
 </pl-pivot-table>
 ```
+\
+\
+\
+\
+
 ### pl-dataframe
 pl-dataframe is built in PL element. I used this element to give clear direction, but if there is any better way other than pl-dataframe, feel free to use it!
 ### pl-code
 pl-code is also for direction and built in PL element
 ### pl-pivot-table
-This is an element we are going to learn about. There are 5 attibutes for this element: col, row, index, multi-col, ellipsis.  
+This is an element we are going to learn about. There are 5 attibutes for this element: col, row, index, multi-col, ellipsis.
+\
+\
 1. col  
 col attribute helps you set the number of column. In this example, it's set to 3.  
-This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.  
-  
-  
-![column_set](img_readme/column_set.png)  
-Take a look each column in the set has three cells  
-
-![answer_form](img_readme/answer_form.png)  
-Take a look column dropzone has three places to drop one of choices in the set
-  
+This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.\
+\
+\
+![column_set](img_readme/column_set.png)\
+Take a look each column in the set has three cells\
+\
+![answer_form](img_readme/answer_form.png)\
+Take a look column dropzone has three places to drop one of choices in the set\
+\
 2. row
 row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.  
-
+\
 Let's take a look of the answer dataframe(printed on Jupyter notebook) again.
 ![answer1_color](img_readme/answer1_color.png)  
 You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered  
