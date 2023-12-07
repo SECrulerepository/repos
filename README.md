@@ -89,16 +89,15 @@ Below is question.html of this question(questions/pivot-table_question1).
 <br />
 <br />
 <br />
-<br />
+
 ### pl-dataframe
 pl-dataframe is built in PL element. I used this element to give clear direction, but if there is any better way other than pl-dataframe, feel free to use it!
 ### pl-code
 pl-code is also for direction and built in PL element
 ### pl-pivot-table
-This is an element we are going to learn about. There are 5 attibutes for this element: col, row, index, multi-col, ellipsis.
-<br />
-<br />
+This is an element we are going to learn about. There are 5 attibutes for this element: col, row, index, multi-col, ellipsis.<br />
 
+<br />
 1. col  
 col attribute helps you set the number of column. In this example, it's set to 3.  
 This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.<br />
