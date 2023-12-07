@@ -99,9 +99,9 @@ This is an element we are going to learn about. There are 5 attibutes for this e
 
 1. col  
 col attribute helps you set the number of column. In this example, it's set to 3.  
-This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.\s\s
-\s\s
-![column_set](img_readme/column_set.png)\s\s
+This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.<br />
+
+![column_set](img_readme/column_set.png)<br />
 Take a look each column in the set has three cells<br />
 <br />
 <br />
