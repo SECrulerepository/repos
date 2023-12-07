@@ -105,7 +105,7 @@ col attribute helps you set the number of column. In this example, it's set to 3
 This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.\
 \
 \
-
+  
 ![column_set](img_readme/column_set.png)\
 Take a look each column in the set has three cells\
 \
