@@ -99,7 +99,7 @@ This is an element we are going to learn about. There are 5 attibutes for this e
 
 1. col  
 col attribute helps you set the number of column. In this example, it's set to 3.  
-This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.<br />
+This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone. Max value of this attribute is 6 since more than 6 columns are easily garbled in the screen.<br />
 
 ![column_set](img_readme/column_set.png)<br />
 Take a look each column in the set has three cells<br />
@@ -109,29 +109,26 @@ Take a look each column in the set has three cells<br />
 Take a look column dropzone has three places to drop one of choices in the set<br />
 <br />
 <br />
-2. row
-row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.<br />
+2. row  
+row attribute has the same function with the col attribute. Max possible value is also the same. However, the way number of rows in dropzone counted is different than column. I will explain why.<br />
 
 Let's take a look of the answer dataframe(printed on Jupyter notebook) again.<br />
 ![answer1_color](img_readme/answer1_color.png)<br />
 You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered<br />
-<br />
-<br />
 ![row_set](img_readme/row_set.png)<br />
 Due to the same reason, you will see one more row in row choices. Why there aren't more than 2 virtual rows in the choice? This is because column set took over the place at the top of row. In other words, that virtual place at the top of each choice will be place for column.<br />
 <br />
 3. index  
 index attribute is for setting number of index. In this example, we are making single index question. Thus, we will go over it later. For the being time, it will be enough to know index attribute can be assigned only two values(1 or 2). The reason why I didn't make triple index is it's not common to see triple index. However, I'm planning to expand the maximum value of index attribute in future  
 ![double-index](img_readme/double-index.png)  
-This will be dropzone you will see when you set this attribute to 2.  
+This will be index set you will see when you set this attribute to 2. You might have noticed that the width of index choice is narrower  
 ![double-index-set](img_readme/double-index-set.png)  
-This will be index set you will see when you set this attribute to 2.  
-
+This will be dropzone you will see when you set this attribute to 2.  
 4. multi-col  
 This attribute will be explained at next example. For now, just keep in mind that this attribute takes boolean  
 
 5. ellipsis
-ellipsis attribute is made to overcome limitation of screensize. When dataframe gets bigger, it will be impossible to draw all the cells in one screen. Ellipsis will add ellipsis at the end of column and row. However, some authors may prefer to type ellipsis by hand instead of setting attribute once. Thus, this attribute can be changed after feedbacks from TAs, instructors, or anyone who is interested in this element.  
+ellipsis attribute is made to overcome limitation of screensize and max number of col and row atrribute. When dataframe gets bigger, it will be impossible to draw all the cells in one screen. Ellipsis will add ellipsis at the end of column and row. However, some authors may prefer to type ellipsis by hand instead of setting attribute once. Thus, this attribute can be changed after feedbacks from TAs, instructors, or anyone who is interested in this element.  
 ![ellipsis](img_readme/ellipsis.png)  
 ```
 <pl-pivot-table col="4" row="3" index="1" multi-col="false" ellipsis="true">
@@ -140,7 +137,7 @@ This is how columns and rows choices look like when ellipsis is set to true. Als
 
 Now, let break down **pl-column**, **pl-index**, and **pl-row**. Each element creats column choices, index choices, and row choices in the set. I will explain it further.  
 
-###. pl-column  
+### pl-column  
 ```
 <pl-column>
     <pl-choice correct="false">B two one</pl-choice>
@@ -161,4 +158,64 @@ What you want to do will be...:
 ```
 <pl-choice correct="false">He\sllo world !</pl-choice>
 ```
-Now, I will explain correct attribute of column. 
+Now, I will explain "correct" attribute of column. correct attribute is for setting the correct choice among the set. In this example, it's set to third one. Also, you can set more than one column as possible answer.  
+
+### pl-index  
+```
+<pl-index>
+    <pl-choice correct="false">A bar &nbsp;</pl-choice>
+    <pl-choice correct="false">A one two</pl-choice>
+    <pl-choice correct="true">A bar foo</pl-choice>
+    <pl-choice correct="false">B two one</pl-choice>
+</pl-index>
+```
+pl-index works pretty similar with pl-column. One difference is if you want to keep certain cell empty. Use &nbsp; instead of \s. This is because string parsing logic behind the element. If you use \s, then the shape of index chices will be garbled.
+
+### pl-row
+```
+<pl-row>
+    <pl-choice correct="true" place="1">13 8</pl-choice>
+    <pl-choice correct="false">4.0 7.0</pl-choice>
+    <pl-choice correct="true" place="2">16 9</pl-choice>
+    <pl-choice correct="false">7.0 3</pl-choice>
+</pl-row>
+```
+pl-row is a little bit different since students have to drag more than one row to solve problem. To set the answer of row, first, you need to set correct attribute of answer choices. In this example, it's first one and third one. After then, you need to set which place the choice should be dropped between 1 to n(depending on what value you set for col attribute).  
+![row_drop](img_readme/row_drop.png)  
+The picture shows you numbering of dropzone. If you set col attribute to 6, then you will see more row dropzones and it will end at 6.  
+
+### Example of double index dataframe:
+Now, we want to creat a question for this operation.
+```
+table = pd.pivot_table(df, values=['E', 'F','G'], index=['A'],
+                       aggfunc={'E': "mean",
+                                'F': ["min", "max", "mean"],
+                                'G': np.median})
+```
+<br />
+<br />
+
+Take a look at the answer of the dataframe. Did you notice some difference?  
+The column place is layered. That is...<br />
+![multi-col](img_readme/multi-col.png)  
+  
+Now compare two dataframe below  
+![multi-col2](img_readme/multi-col2.png)  
+![multi-col1](img_readme/multi-col1.png)  
+The first one is the result of below operation, and the second one is result of an operation with aggfunc='sum' and same values for other arguments.  
+Thus, to address this issue, multi-col attribute is made. When you set this attribute to true, you will get two different dropzones for columns  
+![two_col_dropzone](img_readme/two_col_dropzone.png)  
+After multi-col sets to true, you also need to set two answers for column dropzones. This is similar to pl-row. What you will want to do will be like below:  
+```
+<pl-column>
+    <pl-choice correct="true" place="1">&nbsp; E F &nbsp; &nbsp; G</pl-choice>
+    <pl-choice correct="false">&nbsp; F G &nbsp; &nbsp; A</pl-choice>
+    <pl-choice correct="false">&nbsp; E A &nbsp; &nbsp; G</pl-choice>
+    <pl-choice correct="true" place="2">&nbsp; mean max mean min median</pl-choice>
+    <pl-choice correct="false">&nbsp; min max mean min mean</pl-choice>
+</pl-column>
+```
+As you can see, there are two choices with correct attribute true and place attribute with number 1 and 2. Place 1 is the top of the column dropzone and place is the bottom of the dropzone
+
+# More examples?
+I made more examples at the folder to refer.
