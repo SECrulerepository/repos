@@ -200,8 +200,8 @@ The column place is layered. That is...<br />
 ![multi-col](img_readme/multi-col.png)  
   
 Now compare two dataframe below  
-![multi-col2](img_readme/multi-col2.png)  
-![multi-col1](img_readme/multi-col1.png)  
+![multi-col2](img_readme/mul-col2.png)  
+![multi-col1](img_readme/mul-col1.png)  
 The first one is the result of below operation, and the second one is result of an operation with aggfunc='sum' and same values for other arguments.  
 Thus, to address this issue, multi-col attribute is made. When you set this attribute to true, you will get two different dropzones for columns  
 ![two_col_dropzone](img_readme/two_col_dropzone.png)  
