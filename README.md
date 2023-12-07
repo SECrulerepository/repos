@@ -1,13 +1,13 @@
 #  What does this element do?
-1. pl-plvot-table helps instructor to write questions for pandas pivot table operation practice.  
-2. Students will drag and drop from row, column, and index set provided to complete the dataframe. In other words, students will assemble dataframe like building lego block.  
+## 1. pl-plvot-table helps instructor to write questions for pandas pivot table operation practice.  
+## 2. Students will drag and drop from row, column, and index set provided to complete the dataframe. In other words, students will assemble dataframe like building lego block.  
 
 # Slide deck(Basic plan and idea of this project)
 https://docs.google.com/presentation/d/1K6x-VDJGsnKooS1rQ43vHO1SW6SUSoAYT_lzCyHY5l8/edit#slide=id.g2808ed675f2_1_10
 
-# How can I author a question?
-Here, we will create two questions with fews example: One question for single index dataframe, and the other for double-index dataframe.
-**We will walk through all tutorials using below dataframe**
+# How can I author question?
+Here, we will create two questions with fews example: One question for single index dataframe, and the other for double-index dataframe.  
+**We will walk through ALL tutorials using below dataframe**
 ```
 df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
                          "bar", "bar", "bar", "bar"],
