@@ -113,13 +113,13 @@ Take a look column dropzone has three places to drop one of choices in the set\
 2. row
 row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.  
 \
-Let's take a look of the answer dataframe(printed on Jupyter notebook) again.
-![answer1_color](img_readme/answer1_color.png)  
-You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered  
-
-![row_set](img_readme/row_set.png)  
-Due to the same reason, you will see one more row in row choices. Why there aren't more than 2 virtual rows in the choice? This is because column set took over the place at the top of row. In other words, that virtual place at the top of each choice will be place for column.
-
+Let's take a look of the answer dataframe(printed on Jupyter notebook) again.\
+![answer1_color](img_readme/answer1_color.png)\
+You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered\
+\
+![row_set](img_readme/row_set.png)\
+Due to the same reason, you will see one more row in row choices. Why there aren't more than 2 virtual rows in the choice? This is because column set took over the place at the top of row. In other words, that virtual place at the top of each choice will be place for column.\
+\
 3. index  
 index attribute is for setting number of index. In this example, we are making single index question. Thus, we will go over it later. For the being time, it will be enough to know index attribute can be assigned only two values(1 or 2). The reason why I didn't make triple index is it's not common to see triple index. However, I'm planning to expand the maximum value of index attribute in future  
 ![double-index](img_readme/double-index.png)  
