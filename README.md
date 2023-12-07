@@ -1,20 +1,12 @@
-This is private repository for data protection
-(assets/59519764/04e52b62-0971-4012-a36d-0fa4e66a257f)
+#  What does this element do?
+## pl-plvot-table helps instructor to write questions for pandas pivot table operation practice.  
 
-comment_complexity(59519764/4fb1151e-7879-4e4d-98ce-ef3e7e4c8d98)
+# Slide deck
+## https://docs.google.com/presentation/d/1K6x-VDJGsnKooS1rQ43vHO1SW6SUSoAYT_lzCyHY5l8/edit#slide=id.g2808ed675f2_1_10
 
-num of comments(59519764/9a0981de-df74-4d66-947a-cd932bf6b647)
+# How can I author a question?
+## Here, we will create two questions with fews example: One question for single index dataframe, and the other for double-index dataframe.
 
-year_complexity(59519764/644fe8e1-7bc6-4b0b-9f5f-ba055c2a0410)
-
-
-year_cosim(59519764/263431fb-725a-46a6-a496-8af87c71122e)
-
-rule_number(59519764/27db6d80-079a-4727-ba44-0a22326bfe85)
-
-Comment_num - complexity(59519764/8ce7626e-cd6a-4ce9-bcba-3997050e3a39)
-
-cosim-commenet number(59519764/f1cc62d4-ecf7-4ec3-9436-2943df9a01ea)
-
-cosim-com(59519764/9abd3933-9f8a-4538-a361-d44930d19092)
+### Example of single index dataframe:
+Let's say we want to
 
