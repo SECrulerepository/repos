@@ -36,7 +36,7 @@ Dataframe after this operation will look like this. That is, this will be answer
 ![answer1](img_readme/answer1.png)  
 <br />
 <br />
-<br />
+
 Below is question.html of this question(questions/pivot-table_question1).
 ```
 <pl-dataframe params-name="df" show-index="true" show-dimensions="false" digits="4"></pl-dataframe>
@@ -90,7 +90,6 @@ Below is question.html of this question(questions/pivot-table_question1).
 <br />
 <br />
 <br />
-<br />
 ### pl-dataframe
 pl-dataframe is built in PL element. I used this element to give clear direction, but if there is any better way other than pl-dataframe, feel free to use it!
 ### pl-code
@@ -114,15 +113,16 @@ Take a look column dropzone has three places to drop one of choices in the set<b
 <br />
 <br />
 2. row
-row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.  
-\
-Let's take a look of the answer dataframe(printed on Jupyter notebook) again.\
-![answer1_color](img_readme/answer1_color.png)\
-You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered\
-\
-![row_set](img_readme/row_set.png)\
-Due to the same reason, you will see one more row in row choices. Why there aren't more than 2 virtual rows in the choice? This is because column set took over the place at the top of row. In other words, that virtual place at the top of each choice will be place for column.\
-\
+row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.<br />
+
+Let's take a look of the answer dataframe(printed on Jupyter notebook) again.<br />
+![answer1_color](img_readme/answer1_color.png)<br />
+You will notice that there are some gaps between the starting point of row and column. In other words, two more virtual rows will be needed to draw dataframe. Thus, the total number of rows in dropzone will have 2 rows(virtual rows) more than the value you acutally entered<br />
+<br />
+<br />
+![row_set](img_readme/row_set.png)<br />
+Due to the same reason, you will see one more row in row choices. Why there aren't more than 2 virtual rows in the choice? This is because column set took over the place at the top of row. In other words, that virtual place at the top of each choice will be place for column.<br />
+<br />
 3. index  
 index attribute is for setting number of index. In this example, we are making single index question. Thus, we will go over it later. For the being time, it will be enough to know index attribute can be assigned only two values(1 or 2). The reason why I didn't make triple index is it's not common to see triple index. However, I'm planning to expand the maximum value of index attribute in future  
 ![double-index](img_readme/double-index.png)  
