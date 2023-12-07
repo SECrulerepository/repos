@@ -99,17 +99,21 @@ pl-code is also for direction and built in PL element
 This is an element we are going to learn about. There are 5 attibutes for this element: col, row, index, multi-col, ellipsis.
 \
 \
+
 1. col  
 col attribute helps you set the number of column. In this example, it's set to 3.  
 This attribute will affect the total number of cells in column choice, and the total number of places for column dropzone.\
 \
 \
+
 ![column_set](img_readme/column_set.png)\
 Take a look each column in the set has three cells\
 \
+
 ![answer_form](img_readme/answer_form.png)\
 Take a look column dropzone has three places to drop one of choices in the set\
 \
+
 2. row
 row attribute has the same function with the col attribute. However, the way number of rows in dropzone counted is different than column. I will explain why.  
 \
