@@ -3,12 +3,11 @@
 2. Students will drag and drop from row, column, and index set provided to complete the dataframe. In other words, students will assemble dataframe like building lego block.  
 
 # Slide deck(Basic plan and idea of this project)
-## https://docs.google.com/presentation/d/1K6x-VDJGsnKooS1rQ43vHO1SW6SUSoAYT_lzCyHY5l8/edit#slide=id.g2808ed675f2_1_10
+https://docs.google.com/presentation/d/1K6x-VDJGsnKooS1rQ43vHO1SW6SUSoAYT_lzCyHY5l8/edit#slide=id.g2808ed675f2_1_10
 
 # How can I author a question?
-## Here, we will create two questions with fews example: One question for single index dataframe, and the other for double-index dataframe.
-
-## We will walk through all tutorials using below dataframe
+Here, we will create two questions with fews example: One question for single index dataframe, and the other for double-index dataframe.
+**We will walk through all tutorials using below dataframe**
 ```
 df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
                          "bar", "bar", "bar", "bar"],
@@ -22,7 +21,7 @@ df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
                    "F": [2, 4, 5, 5, 6, 6, 8, 9, 9],
                    "G": [2, 1, 5, 3, 6, 6, 7, 7, 9]})
 ```
-![Kiku](img_readme/dataframe.jpg)  
+![Kiku](img_readme/dataframe.png)  
 
 ### Example of single index dataframe:
 
@@ -31,4 +30,4 @@ df = pd.DataFrame({"A": ["foo", "foo", "foo", "foo", "foo",
 df.pivot_table(index='A', columns='B', values='G', aggfunc='sum')
 ```
 Dataframe after this operation will look like this:  
-![Kiku](img_readme/answer1.jpg)  
+![Kiku](img_readme/answer1.png)  
